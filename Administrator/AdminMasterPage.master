@@ -1,0 +1,69 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="AdminMasterPage.master.cs" Inherits="Administrator_AdminMasterPage" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <link id="CSSLink1" href="../App_Themes/SiteTheme/MainStyleSheet_ltr.css" rel="stylesheet" runat="server" />
+    <link id="CSSLink2" href="../App_Themes/SiteTheme/AdminPagesStyle_ltr.css" rel="stylesheet" runat="server" />
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="formData" runat="server">
+        <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
+        <div class="TopArea">
+            <div class="TopBar">
+                <img src="../Images/Logo_s.png" class="TopLogo" />
+                <asp:Button ID="ButtonExit" CssClass="ButtonExit" runat="server" Text='<%$ Resources:Resource, Exit %>' OnClick="ButtonExit_Click" />
+            </div>
+            <div class="TitleBar">
+                <div class="TitlePlaceHolderDiv">
+                    <asp:ContentPlaceHolder id="ContentPlacePageName" runat="server">
+        
+                    </asp:ContentPlaceHolder>
+                </div>
+                <div class="HorizontalSeparator"></div>
+            </div>
+        </div>
+        <asp:UpdatePanel ID="UpdatePanelContentPlace" runat="server">
+            <ContentTemplate>
+                <div class="ContentPlace">
+                    <div class="MenuPlace">
+                        <ul>
+                            <li><a href="javascript:location.replace('Personal_Information.aspx')"><%=Resources.Resource.PersonalInfo %></a></li>
+                            <li><a href="javascript:location.replace('Add_Customer.aspx')"><%=Resources.Resource.AddCustomer %></a></li>
+                            <li><a href="javascript:location.replace('UsersPage.aspx')">Customers</a></li>
+                        </ul>
+                    </div>
+                    <div class="ContentPlaceSeparator"></div>
+                    <div class="DataPlace">
+                        <asp:ContentPlaceHolder ID="ContentPlaceTopMenu" runat="server">
+
+                        </asp:ContentPlaceHolder>
+                        <asp:ContentPlaceHolder ID="ContentPlaceData" runat="server">
+
+                        </asp:ContentPlaceHolder>
+                    </div>
+                </div>
+            </ContentTemplate>
+        </asp:UpdatePanel>
+        <div class="BottomBar">
+            <img src="../Images/Logo_bw.png" class="BottomLogo" />
+        </div>
+        <div id="EditDataDiv" class="EditDataDiv" runat="server">
+            <div class="EditDataForm">
+                <asp:ImageButton ID="ImageButtonClose" ImageUrl="~/Images/close_button.png" CssClass="ButtonClose" OnClick="ImageButtonClose_Click" runat="server" />
+            </div>
+        </div>
+
+        <%--<script type="text/javascript">
+            function hideEditDataDiv() {
+                document.getElementById('EditDataDiv').style.visibility = 'hidden';
+            }
+        </script>--%>
+
+    </form>
+</body>
+</html>

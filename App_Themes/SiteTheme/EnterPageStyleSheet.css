@@ -1,0 +1,77 @@
+﻿body {
+}
+
+.MainDiv
+{
+    margin:auto;
+    margin-top:20px;
+    width:900px;
+    height:580px;
+    background-image:url("../../Images/slide3.png");
+    background-position:right;
+    background-repeat:no-repeat;
+}
+
+.LeftContentDiv
+{
+    width:498px;
+    height:auto;
+    float:left;
+}
+
+.Logo
+{
+    float:right;
+    margin-right:15px;
+}
+
+.Separator
+{
+    width:498px;
+    height:2px;
+    background-color:#808080;
+    float:right;
+}
+
+.TextBox
+{
+    width:300px;
+    height:30px;
+    float:right;
+    margin-right:120px;
+    margin-top:30px;
+    padding-right:10px;
+    background-color:#cccccc;
+    border:solid;
+    border-color:#e5e5e5;
+    border-width:1px;
+    direction:rtl;
+    color:#ffffff;
+    font-size:18px;
+    font-family:Arial;
+}
+
+.ButtonSend
+{
+    width:160px;
+    height:35px;
+    float:right;
+    margin-right:120px;
+    margin-top:30px;
+    background-color:#808080;
+    color:#ffffff;
+    font-family:Arial;
+    font-size:18px;
+    border:none;
+    border-radius: 8px;
+}
+
+.LabelError
+{
+    color:#921410;
+    direction:rtl;
+    float:right;
+    margin-right:120px;
+    margin-top:20px;
+    font-family:Arial;
+}
