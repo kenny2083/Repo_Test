@@ -12,6 +12,7 @@ public partial class _Default : System.Web.UI.Page
         if (!IsPostBack)
         {
             Session.Abandon();
+            //fhfghfghgfhgfhgfh
         }
     }
     protected void ButtonSend_Click(object sender, EventArgs e)
