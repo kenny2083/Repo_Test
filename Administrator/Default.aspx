@@ -26,6 +26,10 @@
             </ContentTemplate>
         </asp:UpdatePanel>
 
+        <div>
+
+        </div>
+
         <script type="text/javascript">
             Sys.WebForms.PageRequestManager.getInstance().add_endRequest(EndRequest);
             function EndRequest()
